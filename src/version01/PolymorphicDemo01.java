@@ -35,6 +35,14 @@ public class PolymorphicDemo01 {
              ) {
             master.feed(ani);
         }
+        System.out.println();
+
+        for (Animal01 ani : animal01s
+             ) {
+            ani.run();
+        }
+
+
 
     }
 }

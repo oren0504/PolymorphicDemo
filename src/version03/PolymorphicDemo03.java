@@ -9,13 +9,11 @@ public class PolymorphicDemo03 {
     private static int gameRound;
 
     static ConfirmState confirmState;
-    static Master03 master;
-    static Animal03[] animal03s;
-
     private enum ConfirmState{
         Y,N,
     }
-
+    static Master03 master;
+    static Animal03[] animal03s;
 
     static {
         System.out.println("想玩几局？");
@@ -34,7 +32,6 @@ public class PolymorphicDemo03 {
         }
 
     }
-
 
     private static void setUp(){
         master = new Master03();
@@ -105,7 +102,6 @@ public class PolymorphicDemo03 {
 
             List<Animal03> dynamicList = Arrays.asList(animal03s);
 
-
             List<String> strOut = dynamicList
                     .stream()
                     .filter(i -> i instanceof Swim03)
@@ -123,7 +119,6 @@ public class PolymorphicDemo03 {
 
             System.out.println();
             strOut.forEach(i -> System.out.println(i));
-
 
             Scanner scanner = new Scanner(System.in);
             System.out.print("你是否选择喂养所有动物？\n\t\t[Y] / [N]\n");
@@ -153,7 +148,6 @@ public class PolymorphicDemo03 {
             System.out.printf("第%d局结束。",a);
 
         }
-
     }
 
 }

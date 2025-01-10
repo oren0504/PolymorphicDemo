@@ -1,6 +1,6 @@
 package version01;
 
-public class Animal01 {
+public class Animal01 implements Runnable{
     private String name;
     private int age;
     private Color color;
