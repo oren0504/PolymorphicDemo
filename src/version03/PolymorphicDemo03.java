@@ -16,19 +16,19 @@ public class PolymorphicDemo03 {
     static Animal03[] animal03s;
 
     static {
-        System.out.println("想玩几局？");
+        System.out.println("你好，想玩几局？");
         Scanner scanner = new Scanner(System.in);
         try{
             gameRound = scanner.nextInt();
             gameRound = gameRound>0 ? gameRound : -1;
 
             while (gameRound == -1){
-                System.out.println("不想玩就爬。");
+                System.out.println("请输入有效数字。");
                 gameRound = scanner.nextInt();
                 gameRound = gameRound>0 ? gameRound : -1;
             }
         }catch (Exception e){
-            System.out.println("别玩了。");
+            System.out.println("数字异常，启动失败。");
         }
 
     }
